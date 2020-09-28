@@ -19,7 +19,7 @@
       for (let i = 0; i < mot.length; i++) {
         for (let y = 0; y < tabVoyelles.length; y++) {
           if (mot[i] === tabVoyelles[y]) {
-          lettre = lettre +1;
+            lettre = lettre + 1;
           }
 
         }
@@ -27,16 +27,40 @@
       return lettre;
     }
     //test
-    describe ("test de la fonction Voyelles", function (){
-      it("on teste la chaine de caractère aeiou", function(){
+    describe("test de la fonction Voyelles", function () {
+      it("on teste la chaine de caractère aeiou", function () {
         expect(compteVoyelles("aeiou")).toBe(5)
       })
-      it("on teste la chaine de caractère sqdfjklm", function(){
+      it("on teste la chaine de caractère sqdfjklm", function () {
         expect(compteVoyelles("sqdfjklm")).toBe(0)
       })
-      it("on teste la chaine de caractère azerty", function(){
+      it("on teste la chaine de caractère azerty", function () {
         expect(compteVoyelles("azerty")).toBe(3)
       })
+    })
+
+    //test Pile ou face
+
+    function pileouface() {
+      let a = Math.random();
+      console.log(a);
+
+      let b = Math.round(a);
+      return b; // porte de sortie
+      switch (a) {
+        case 1:
+          console.log("pile");
+
+        case 0:
+          console.log("face");
+      }
+    }
+
+    describe("test de la fonction pileouface", function () {
+      it("on test la valeur aléatoire de a et b qui doit donner 0 ou 1 (pile ou face", function () {
+        let pileface = pileouface()
+        expect(pileFace === 0 || pileFace === 1).toBe(true);
+      });
     })
   </script>
 </head>
