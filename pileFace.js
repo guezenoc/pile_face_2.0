@@ -50,7 +50,7 @@ function compteVoyelles(mot){
     for (let i = 0; i < mot.length; i++) {       
         for (let y = 0; y < tabVoyelles.length; y++) {
             if (mot[i]=== tabVoyelles[y]) {
-                
+                 
             }
             
         }
